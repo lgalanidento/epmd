@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Página de Contacto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+        }
+
+        .contact-form h2, .contact-info h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .input-group textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .thank-you-message {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #dff0d8;
+            border: 1px solid #d0e9c6;
+            border-radius: 5px;
+            color: #3c763d;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Bienvenido a nuestra página de contacto</h1>
+        </header>
+
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <h2>Formulario de contacto</h2>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+            <div id="thankYouMessage" class="thank-you-message" style="display:none;">
+                <p>¡Gracias por contactarnos! Te responderemos pronto.</p>
+            </div>
+        </section>
+
+        <!-- Información de contacto -->
+        <section class="contact-info">
+            <h2>Contáctanos</h2>
+            <p>Teléfono: <a href="tel:+34123456789" id="contactPhone">+34 123 456 789</a></p>
+            <p>Email: <a href="mailto:info@empresa.com" id="contactEmail">info@empresa.com</a></p>
+        </section>
+    </div>
+
+</body>
+</html>
